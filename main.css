@@ -1,0 +1,15 @@
+#templates {
+	display: none;
+}
+
+.heading {
+	font-family: Georgia;
+	font-weight: bold;
+	font-size: 3em;
+	color: #686868;
+	margin: 100px auto 0px 350px;
+}
+
+.heading span {
+	color: #339999;
+}
