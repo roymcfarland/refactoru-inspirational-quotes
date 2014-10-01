@@ -1,15 +1,32 @@
-#templates {
-	display: none;
+body {
+	font-family: 'Droid Sans', sans serif;
 }
 
 .heading {
-	font-family: Georgia;
-	font-weight: bold;
 	font-size: 3em;
+	font-weight: bold;
 	color: #686868;
-	margin: 100px auto 0px 350px;
+	margin: 0px 30%;
 }
 
 .heading span {
 	color: #339999;
+	font-family: 'Amatic Sans', cursive;
+}
+
+.quote-form {
+	border: lightgray solid 1px;
+	padding: 10px 10px;
+	height: 80px;
+	width: 400px;
+	margin: 0px 30%;
+}
+
+.quote-form input {
+	width: 380px;
+}
+
+.button {
+	float: right;
+	margin: 2% 5%;
 }
