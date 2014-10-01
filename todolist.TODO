@@ -1,6 +1,7 @@
 SETUP
  ✔ Make Quote class @done (14-10-01 11:17)
- ☐ Make Library
- ☐ Create some Quotes
- ☐ Put Quotes into Library
- ☐ Create 
+ ✔ Make Library for appending Quotes @done (14-10-01 14:04)
+ ✔ Create some Quotes @done (14-10-01 14:04)
+ ✔ Create function that renders Quote items @done (14-10-01 14:05)
+ ✔ Put Quotes into Library @done (14-10-01 16:58)
+   
