@@ -14,7 +14,7 @@ var Quote = function(quote, author, allQuotes) {
 	this.author = author;
 };
 
-	var allQuotes = [];
+var allQuotes = [];
 
 
 ///////////////////
@@ -36,29 +36,48 @@ Quote.prototype.render = function() {
 	this.element = $('<ul>');
 	this.element
 		.addClass('quote-item')
-		.append('<li>' + this.quote + '</li>')
-		.append('<li>' + this.author + '</li>');
+		.append('<li>"' + this.quote + '"</li>')
+		.append('<li>' + '- ' + this.author + '</li>')
+		.append('<i class="fa fa-star-o"></i><br>' +
+				'<i class="fa fa-star-o"></i><br>' +
+				'<i class="fa fa-star-o"></i><br>' +
+				'<i class="fa fa-star-o"></i><br>' +
+				'<i class="fa fa-star-o"></i><br>')
+		.append('<button class="removeButton">Remove</button>');
 
 	return this.element;
 };
 
 $(document).on('ready', function() {
 
+	// Appends a DOM element containing the quote and
+	// author to the page in the div (class: library)
 	$('#form').on('submit', function(e) {
 		e.preventDefault();
-		var form = $('#form')
+		var form = $('#form');
 		var quote = form.find('[name=quote]').val();
-		// console.log(quote);
 		var author = form.find('[name=author]').val();
-
 		form.find('[name=quote]').val('');
-		// console.log(quote);
 		form.find('[name=author]').val('');
-		// console.log(author);
 		var thisQuote = new Quote(quote, author);
 		allQuotes.push(thisQuote);
-		// console.log(allQuotes);
-		$('.library').append(thisQuote.render());
+		$('#library').append(thisQuote.render());
+		thisQuote.element.find('.removeButton').click(function() {
+			console.log("hey")
+			$(this).closest('.quote-item').remove();
+			allQuotes = _.without(allQuotes, thisQuote);
+
+
+		});
 	});
+
+
+
+
+
+
+
+
+
 
 });

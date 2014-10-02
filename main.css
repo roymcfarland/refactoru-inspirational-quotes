@@ -30,3 +30,25 @@ body {
 	float: right;
 	margin: 2% 5%;
 }
+
+.quote-item {
+	color: #686868;
+	font-weight: bold;
+	margin: 60px -10px;
+	height: 165px;
+	width: 400px;
+	list-style: none;
+	border: lightgray solid 1px;
+	padding: 10px 10px;
+}
+
+.removeButton {
+	color: black;
+	float: right;
+	margin: 2% 5%;
+}
+
+.quote-item i {
+	display: inline-block;
+	float: right;
+}
